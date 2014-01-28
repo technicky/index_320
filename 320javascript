@@ -1,0 +1,15 @@
+function play_video(video, image, video2){
+  var sources = [{file: unescape(video)}];
+  if (video2 !== undefined) sources.push({ file: unescape(video2)});
+  jwplayer("Default_Regular").setup({
+    playlist:[{
+      image:image,
+      sources:sources
+    }],
+    primary:'flash',
+    autostart:"true",
+    volume:90,
+    width: 320,
+    height: 260
+  });
+}
